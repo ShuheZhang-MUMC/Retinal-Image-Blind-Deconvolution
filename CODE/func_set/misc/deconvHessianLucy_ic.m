@@ -28,9 +28,9 @@ for con = 1:iter
     disp(['proceding Lucy-Hessian deconvolution at ',num2str(con),'-iter'])
     if lambda ~= 0
 
-        gxx = imfilter(q.para,[1,-2,-1],'replicate');
-        gyy = imfilter(q.para,[1;-2;-1],'replicate');
-        gxy = imfilter(q.para,[-1,1;1,-1],'replicate');
+        gxx = imfilter(q.para,[1,-2,1],'replicate');
+        gyy = imfilter(q.para,[1;-2;1],'replicate');
+        gxy = imfilter(q.para,[-1,1,0;1,-1,0;0,0,0],'replicate');
         
         ss = sqrt(gxx.^2 + gyy.^2 + gxy.^2) + eps;
         
@@ -38,9 +38,9 @@ for con = 1:iter
         gyy = gyy./ss;
         gxy = gxy./ss;
         
-        gxx = imfilter(gxx,[1,-2,-1],'replicate');
-        gyy = imfilter(gyy,[1;-2;-1],'replicate');
-        gxy = imfilter(gxy,[-1,1,0;1,-1,0;0,0,0],'replicate');
+        gxx = imfilter(gxx,[1,-2,1],'replicate');
+        gyy = imfilter(gyy,[1;-2;1],'replicate');
+        gxy = imfilter(gxy,[0,0,0;0,-1,1;0,1,-1],'replicate');
         
         Hessian = lambda * (gxx + gyy + gxy);
     else
