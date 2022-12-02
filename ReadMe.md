@@ -4,7 +4,8 @@
 
 # Luminosity rectified blind Richardson-Lucy deconvolution for single retinal image restoration
 This is the MATLAB code for retinal image blind-deconvolution using Luminosity Rectified Blind Richardson-Lucy Deconvolution.
-We are happy that this research has been accepted and published on Computer Methods and Programs in Biomedicine
+
+We are happy that this research has been accepted and published on **Computer Methods and Programs in Biomedicine**
 
 ## Abstract
 **Background and Objective:** Due to imperfect imaging conditions, retinal images can be degraded by uneven/insufficient illumination, blurriness caused by optical aberrations and unintentional motions. Degraded images reduce the effectiveness of diagnosis by an ophthalmologist. To restore the image quality, in this research we propose the luminosity rectified Richardson-Lucy (LRRL) blind deconvolution framework for single retinal image restoration. 
@@ -22,7 +23,7 @@ User may need to tune the model parameters in order to get better performance.
 
 ## Flow chart:
 <div align="center">
-<img src="https://github.com/ShuheZhang-MUMC/Retinal-Image-Blind-Deconvolution/blob/main/demo/flow.png" width = "1000" alt="" align=center />
+<img src="https://github.com/ShuheZhang-MUMC/Retinal-Image-Blind-Deconvolution/blob/main/demo/flow.png" width = "900" alt="" align=center />
 </div>
 
 First, with the input image, we use the blind-deconvolution to obtain the estimation of illumination pattern and blurry kernel. Second, with the illumination pattern and kernel, we apply non-blind deconvolution to the input image to obtain the luminosity rectified, deconvoluted images.
