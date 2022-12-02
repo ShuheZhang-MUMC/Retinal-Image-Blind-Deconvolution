@@ -46,7 +46,7 @@ img_raw_gray = img_raw_temp;
 
 %% blind-deconvolution
 tic
-lambda1 = 0.0022;  % gradient-L0 penalty for latent image
+lambda1 = 0.0025;  % gradient-L0 penalty for latent image
 lambda2 = 2;      % gradient-L1 (TV) penalty for latent illumination pattern
 show_iter = false;
 %
