@@ -27,4 +27,11 @@ First, with the input image, we use the blind-deconvolution to obtain the estima
 ### Latent images
 <img src="https://github.com/ShuheZhang-MUMC/Retinal-Image-Blind-Deconvolution/blob/main/demo/Picture1.png" width = "800" alt="" align=center />
 
-The intermediate products are shown in the following figure including latent images, latent illumination patterns, and point spread functions.
+Latent images and illumination patterns for blind illumination correction and deconvolution. (a1) and (a2) are raw images in grayscale, respectively. The convolution kernels are estimated in 51-by-51 pixels and are up-sampled to 128-by-128 for better observation. (b1) and (b2) are latent images. (c1) and (c2) are latent illumination estimation. 
+
+## Retinopathy diagnosis with restored images
+Our proposed method can potentially benefit diagnising with the restoration.
+
+<img src="https://github.com/ShuheZhang-MUMC/Retinal-Image-Blind-Deconvolution/blob/main/demo/Picture2.png" width = "800" alt="" align=center />
+
+Enhancement of retinopathy areas using proposed method. (a) Raw image. (b) Restored image. (c) Labels of retinopathy areas. Red: Hard exudates; Green: Hemorrhages; Cyan: red small dots. (d1) to (g2) are zoomed-in pictures for regions in blue, green, yellow, and red boxes. 
