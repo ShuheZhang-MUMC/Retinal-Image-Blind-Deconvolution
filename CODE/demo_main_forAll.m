@@ -21,14 +21,10 @@ img_raw0 = imresize(double(imread([img_path,img_name]))/255,1);
 mult = 1;
 color_threshold = 20;
 [m0,n0,~] = size(img_raw0);
-gauss_size = fix(sqrt(m0*n0)/20);
+gauss_size = fix(sqrt(m0*n0)/10);
 [img_raw0,mask] = prepossing(img_raw0,color_threshold,gauss_size,mult);
 figure();imshow(img_raw0,[])
 
-% gauss_size = 1;
-% mask = 1;
-
-% imshow(dark_raw,[])
 [~,~,c] = size(img_raw0);
 if c > 1
     img_raw = 0.3*img_raw0(:,:,1) + 0.6*img_raw0(:,:,2) + 0.1*img_raw0(:,:,3);
