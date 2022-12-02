@@ -1,4 +1,4 @@
-# Luminosity Rectified Blind Richardson-Lucy Deconvolution for Single Retinal Image Restoration
+# Luminosity rectified blind Richardson-Lucy deconvolution for single retinal image restoration
 This is the MATLAB code for retinal image blind-deconvolution using Luminosity Rectified Blind Richardson-Lucy Deconvolution.
 We are happy that this research has been accepted and published on Computer Methods and Programs in Biomedicine
 
