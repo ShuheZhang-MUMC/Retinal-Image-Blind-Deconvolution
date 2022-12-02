@@ -30,12 +30,14 @@ User may need to tune the model parameters in order to get better performance.
 <img src="https://github.com/ShuheZhang-MUMC/Retinal-Image-Blind-Deconvolution/blob/main/demo/flow.png" width = "900" alt="" align=center />
 </div>
 
+
 First, with the input image, we use the blind-deconvolution to obtain the estimation of illumination pattern and blurry kernel. Second, with the illumination pattern and kernel, we apply non-blind deconvolution to the input image to obtain the luminosity rectified, deconvoluted images.
 
-### Latent images
+### Latent images:
 <div align="center">
 <img src="https://github.com/ShuheZhang-MUMC/Retinal-Image-Blind-Deconvolution/blob/main/demo/Picture1.png" width = "800" alt="" align=center />
 </div>
+
 
 Latent images and illumination patterns for blind illumination correction and deconvolution. (a1) and (a2) are raw images in grayscale, respectively. The convolution kernels are estimated in 51-by-51 pixels and are up-sampled to 128-by-128 for better observation. (b1) and (b2) are latent images. (c1) and (c2) are latent illumination estimation. 
 
