@@ -1,3 +1,6 @@
+% Solving Richardson-Lucy deconvolution with Hessian regularization and illumination correction
+% using (sub)gradient descent. The optimizer is NAdam
+
 function [cost,out] = deconvHessianLucy_ic(img,psf,dark,iter,lambda,I0)
 
 [m,n,~] = size(img);
@@ -23,7 +26,6 @@ H = psf2otf(psf,[m,n]);
 
 for con = 1:iter
     disp(['proceding Lucy-Hessian deconvolution at ',num2str(con),'-iter'])
-%     con
     if lambda ~= 0
 
         gxx = imfilter(q.para,[1,-2,-1],'replicate');
