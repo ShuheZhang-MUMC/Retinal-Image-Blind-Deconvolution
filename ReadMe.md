@@ -1,11 +1,13 @@
 <div align="center">
 <img src="https://github.com/ShuheZhang-MUMC/Retinal-Image-Blind-Deconvolution/blob/main/demo/demo.png" width = "800" alt="" align=center />
 </div>
-
+<div align="center">
 # Luminosity rectified blind Richardson-Lucy deconvolution for single retinal image restoration
+</div>
 This is the MATLAB code for retinal image blind-deconvolution using Luminosity Rectified Blind Richardson-Lucy Deconvolution.
 
 We are happy that this research has been accepted and published on **Computer Methods and Programs in Biomedicine**
+
 
 ## Abstract
 **Background and Objective:** Due to imperfect imaging conditions, retinal images can be degraded by uneven/insufficient illumination, blurriness caused by optical aberrations and unintentional motions. Degraded images reduce the effectiveness of diagnosis by an ophthalmologist. To restore the image quality, in this research we propose the luminosity rectified Richardson-Lucy (LRRL) blind deconvolution framework for single retinal image restoration. 
@@ -16,10 +18,12 @@ We are happy that this research has been accepted and published on **Computer Me
 
 **Conclusions:** Our LRRL corrects the problematic illumination and improves the clarity of retinal image simultaneously, showing its superiority in terms of restoration quality and implementation efficiency.
 
+
 ## USAGE:
 Run *demo_main_forAll.m* and select a retinal image from the dataset. The results will be saved in 'results' folder.
 
 User may need to tune the model parameters in order to get better performance.
+
 
 ## Flow chart:
 <div align="center">
@@ -34,6 +38,7 @@ First, with the input image, we use the blind-deconvolution to obtain the estima
 </div>
 
 Latent images and illumination patterns for blind illumination correction and deconvolution. (a1) and (a2) are raw images in grayscale, respectively. The convolution kernels are estimated in 51-by-51 pixels and are up-sampled to 128-by-128 for better observation. (b1) and (b2) are latent images. (c1) and (c2) are latent illumination estimation. 
+
 
 ## Retinopathy diagnosis with restored images
 Our proposed method can potentially benefit diagnising with the restoration as shown in the following figure.
