@@ -30,7 +30,7 @@ First, with the input image, we use the blind-deconvolution to obtain the estima
 Latent images and illumination patterns for blind illumination correction and deconvolution. (a1) and (a2) are raw images in grayscale, respectively. The convolution kernels are estimated in 51-by-51 pixels and are up-sampled to 128-by-128 for better observation. (b1) and (b2) are latent images. (c1) and (c2) are latent illumination estimation. 
 
 ## Retinopathy diagnosis with restored images
-Our proposed method can potentially benefit diagnising with the restoration.
+Our proposed method can potentially benefit diagnising with the restoration as shown in the following figure.
 
 <img src="https://github.com/ShuheZhang-MUMC/Retinal-Image-Blind-Deconvolution/blob/main/demo/Picture2.png" width = "800" alt="" align=center />
 
