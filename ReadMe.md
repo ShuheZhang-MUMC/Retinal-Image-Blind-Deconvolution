@@ -4,6 +4,15 @@
 This is the MATLAB code for retinal image blind-deconvolution using Luminosity Rectified Blind Richardson-Lucy Deconvolution.
 We are happy that this research has been accepted and published on Computer Methods and Programs in Biomedicine
 
+## Abstract
+**Background and Objective:** Due to imperfect imaging conditions, retinal images can be degraded by uneven/insufficient illumination, blurriness caused by optical aberrations and unintentional motions. Degraded images reduce the effectiveness of diagnosis by an ophthalmologist. To restore the image quality, in this research we propose the luminosity rectified Richardson-Lucy (LRRL) blind deconvolution framework for single retinal image restoration. 
+
+**Methods:** We established an image formation model based on the double-pass fundus reflection feature and developed a differentiable non-convex cost function that jointly achieves illumination correction and blind deconvolution. To solve this non-convex optimization problem, we derived the closed-form expression of the gradients and used gradient descent with Nesterov-accelerated adaptive momentum estimation to accelerate the optimization, which is more efficient than the traditional half quadratic splitting method. 
+
+**Results:**  The LRRL was tested on 1719 images from three public databases. Four image quality matrixes including image definition, image sharpness, image entropy and image multiscale contrast were used for objective assessments. The LRRL was compared against the state-of-the-art retinal image blind deconvolution methods. 
+
+**Conclusions:** Our LRRL corrects the problematic illumination and improves the clarity of retinal image simultaneously, showing its superiority in terms of restoration quality and implementation efficiency.
+
 ### USAGE:
 Run *demo_main_forAll.m* and select a retinal image from the dataset. The results will be saved in 'results' folder.
 User may need to tune the model parameters in order to get better performance.
