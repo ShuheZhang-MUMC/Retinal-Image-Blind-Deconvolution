@@ -19,7 +19,7 @@ rho1 = 0.9;
 rho2 = 0.999;
 step = 0.05;
 
-g_size = round(sqrt(m*n)/20);
+g_size = round(sqrt(m*n)/10);
 ic = imfilter(dark_w,fspecial('gaussian',2*g_size,g_size),'replicate');
 
 o0.para = img ./(ic + eps);
