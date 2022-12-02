@@ -1,9 +1,9 @@
 <div align="center">
 <img src="https://github.com/ShuheZhang-MUMC/Retinal-Image-Blind-Deconvolution/blob/main/demo/demo.png" width = "800" alt="" align=center />
 </div>
-<div align="center">
+
 # Luminosity rectified blind Richardson-Lucy deconvolution for single retinal image restoration
-</div>
+
 This is the MATLAB code for retinal image blind-deconvolution using Luminosity Rectified Blind Richardson-Lucy Deconvolution.
 
 We are happy that this research has been accepted and published on **Computer Methods and Programs in Biomedicine**
