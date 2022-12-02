@@ -38,7 +38,7 @@ for con = 1:iter
         
         gxx = imfilter(gxx,[1,-2,-1],'replicate');
         gyy = imfilter(gyy,[1;-2;-1],'replicate');
-        gxy = imfilter(gxy,[-1,1,0;1,-1,0],'replicate');
+        gxy = imfilter(gxy,[-1,1,0;1,-1,0;0,0,0],'replicate');
         
         Hessian = lambda * (gxx + gyy + gxy);
     else
