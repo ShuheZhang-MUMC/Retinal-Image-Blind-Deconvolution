@@ -91,5 +91,6 @@ out_img_cut0 = out_img0(kk+1:end-kk,kk+1:end-kk,:);
 % enhanced image
 imwrite(out_img_cut0,['results//',img_name(1:end-4),'//',img_name(1:end-4),'out.png'])
 
-save(['results//',img_name(1:end-4),'//',img_name(1:end-4),'_1.mat'],'psf','img_raw0','mask')
+save(['results//',img_name(1:end-4),'//',img_name(1:end-4),'_1.mat'],...
+                                     'psf','latant_ill','img_raw0','mask')
 
