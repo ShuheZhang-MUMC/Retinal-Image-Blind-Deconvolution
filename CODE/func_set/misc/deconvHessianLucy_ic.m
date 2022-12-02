@@ -72,10 +72,8 @@ for con = 1:iter
         break
     end
 end
-a.para
 
 out = gather(q.para);
-
 
 end
 
