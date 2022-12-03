@@ -68,7 +68,7 @@ for this_scal = scal_num:-1:1
     lambda1_temp = lambda1;
     lambda2_temp = lambda2;
     for iter = 1:opts.xk_iter 
-        [Q,O] = updata_O_jointly(img_ds_w,vchan_ds,ker_est, lambda1_temp,lambda2_temp);
+        [Q,O] = updata_O_jointly_conv(img_ds_w,vchan_ds,ker_est, lambda1_temp,lambda2_temp);
    
         QO = O .* Q; QO = QO(1:H,1:W);
         ker_est = updata_H((QO),Bx,By,ker_est,threshold);
