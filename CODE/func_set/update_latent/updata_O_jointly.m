@@ -35,7 +35,7 @@ for con = 1:25
     den = real(ifft2(HT.*H.*fft2(q0.para.*o0.para) - HT.*fft_s));
     
     Grad_o = 2 * q0.para .* den + lambda1 * prox_L0(o0.para,Dx,Dy,Dxy,Dyx,8);
-    Grad_i = 2 * o0.para .* den + lambda2 * prox_L1(q0.para,Dx,Dy,1);
+    Grad_i = 2 * o0.para .* den + lambda2 * prox_L1(q0.para,Dx,Dy);
     
     
     o0 = optimizer_nadam(o0,Grad_o,rho1,rho2,step,con);
@@ -82,17 +82,17 @@ function out = prox_L0(o,dx,dy,dxy,dyx,beta)
     out = (gx + gy + gxy + gyx);
 end
 
-function out = prox_L1(o,dx,dy,beta)
+function out = prox_L1(o,dx,dy)
     fft_q = fft2(o);
     
     gx = real(ifft2(fft_q.*dx));
     gy = real(ifft2(fft_q.*dy));
     ss = sqrt(gx.^2 + gy.^2);   
  
-%     v1 = gx./(ss + eps);
-%     v2 = gy./(ss + eps);
-    v1 = beta * exp(- beta * abs(gx)) .* sign(gx);
-    v2 = beta * exp(- beta * abs(gy)) .* sign(gy);
+     v1 = gx./(ss + eps);
+     v2 = gy./(ss + eps);
+%    v1 = beta * exp(- beta * abs(gx)) .* sign(gx);
+%    v2 = beta * exp(- beta * abs(gy)) .* sign(gy);
 
     gx = real(ifft2(fft2(v1) .* conj(dx)));
     gy = real(ifft2(fft2(v2) .* conj(dy)));
